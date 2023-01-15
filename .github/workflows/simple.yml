@@ -19,9 +19,11 @@ jobs:
         shell: python
   run-windows-commands:
     runs-on: windows-latest
+    #同期似する
     needs: ['run-shell-command']
     steps:
       - name: Directroy PowerShell
+        #shellの指示がないときはpowershellになる。
         run: Get-Location
       - name: Directroy Bash
         run: pwd
